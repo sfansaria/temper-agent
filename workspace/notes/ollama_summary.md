@@ -1,0 +1,1 @@
+Ollama enables local execution of language models by installing the software and using the `ollama pull` command, requiring approximately 5 GB of disk space and compatible with systems like a 24 GB Mac.

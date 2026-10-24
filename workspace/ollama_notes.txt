@@ -1,0 +1,1 @@
+Ollama runs language models locally. Install it, then run `ollama pull qwen3:8b`. The model needs about 5 GB of disk space and runs well on a 24 GB Mac.
