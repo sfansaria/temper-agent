@@ -24,17 +24,16 @@ def number_tool(name: str, description: str) -> dict:
                 "name": name,
                 "description": description,
                 "parameters": {
-                    "parameters": {
-                        "type": "object",
-                        "properties":{ 
-                             "a": {"type": "number", "description": "The first number"},
-                             "b": {"type": "number", "description": "The second number"},
-                        },
-                        "required": ["a", "b"],
+                    "type": "object",
+                    "properties":{ 
+                         "a": {"type": "number", "description": "The first number"},
+                         "b": {"type": "number", "description": "The second number"},
+                    },
+                    "required": ["a", "b"],
                 },
             },
     }
-}
+
 
 
 
