@@ -1,14 +1,3 @@
-"""Day 4: real tools. Same loop as Day 3, but the agent can now work with files.
-
-Tools:  list_files, read_file, write_note, search_web (fake, canned results)
-
-SAFETY: file tools only work inside ./workspace. Any path that tries to
-escape it (like ../../secrets) is refused. Never give a model unrestricted
-file access.
-
-Run:  python agent_tools.py
-      python agent_tools.py "Which file mentions Ollama? Summarize it and save the summary as a note."
-"""
 import sys
 from pathlib import Path
 
@@ -35,6 +24,7 @@ def seed_workspace() -> None:
         ),
         "shopping.txt": "Milk, eggs, bread, coffee, bananas.",
     }
+
     for name, text in samples.items():
         path = WORKSPACE / name
         if not path.exists():
@@ -43,7 +33,9 @@ def seed_workspace() -> None:
 
 # --- safety: keep every path inside the workspace ------------------------
 def safe_path(relative: str) -> Path:
+    
     path = (WORKSPACE / relative).resolve()
+
     if WORKSPACE.resolve() != path and WORKSPACE.resolve() not in path.parents:
         raise ValueError("path is outside the workspace")
     return path

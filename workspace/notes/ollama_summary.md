@@ -1,1 +1,1 @@
-Ollama is a language model runner that requires 5 GB of disk space and works efficiently on a 24 GB Mac. Install it and run `ollama pull qwen3:8b` to use the model.
+Ollama enables local execution of language models like Qwen3:8b, requiring installation, 5 GB disk space, and a 24 GB Mac for optimal performance.
